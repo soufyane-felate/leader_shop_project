@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fr_client_login"
+    android:background="@drawable/bottom_arc"
+
+
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/background001"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="277dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/input_style"
+        android:drawableLeft="@drawable/baseline_mark_email_read_24"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="284dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/input_style"
+        android:drawableRight="@drawable/baseline_disabled_visible_24"
+        android:drawableLeft="@drawable/baseline_password_24"
+
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:longClickable="false"
+        android:textSize="20dp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+
+
+
+
+
+    <TextView
+            android:id="@+id/new_acc"
+            android:layout_width="190dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="155dp"
+            android:text="create new account"
+            android:textColor="#000313"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/successText"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="12dp"
+        android:drawableStart="@drawable/baseline_forward_10_24"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+            android:id="@+id/admin"
+            android:layout_width="56dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/seller"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="10dp" />
+
+
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/btn"
+        android:text="sign in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/new_acc"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

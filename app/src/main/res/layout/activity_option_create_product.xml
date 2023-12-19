@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.option_create_product">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="product options"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/id_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="id"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/name_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="name"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/price_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="price"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/img_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="description"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/desc_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="image"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+    <RadioGroup
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+
+        >
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24dp"
+            android:text=" male "/>
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24dp"
+
+            android:text=" female "/>
+    </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_add_product"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn"
+            android:gravity="center_horizontal"
+            android:hint="add"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+
+
+</LinearLayout>

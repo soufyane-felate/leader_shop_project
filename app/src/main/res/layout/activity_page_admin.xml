@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/alert_light_frame"
+    tools:context=".page_admin">
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/titleLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_horizontal"
+        android:text="page admin"
+        android:textSize="50dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/ad_email"
+        android:layout_width="277dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/input_style"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/ad_password"
+        android:layout_width="284dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/input_style"
+        android:drawableRight="@drawable/baseline_disabled_visible_24"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:longClickable="false"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ad_email"
+        app:layout_constraintTop_toBottomOf="@+id/ad_email" />
+
+    <Button
+        android:id="@+id/sel_sign_in"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#A39302"
+        android:text="sign in"
+        app:layout_constraintEnd_toEndOf="@+id/ad_password"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="@+id/ad_password"
+        app:layout_constraintTop_toBottomOf="@+id/successText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/seller" />
+
+
+    <TextView
+        android:id="@+id/successText"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="Please wait"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/ad_password"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/ad_password"
+        app:layout_constraintTop_toBottomOf="@+id/ad_password" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/m_popular"
+        android:enabled="true"
+        android:icon="@drawable/baseline_whatshot_24"
+        android:title="Popular" />
+
+    <item
+        android:id="@+id/m_bags"
+        android:enabled="true"
+        android:icon="@drawable/baseline_shopping_bag_24"
+        android:title="Bags" />
+    <item
+        android:id="@+id/m_clothes"
+        android:enabled="true"
+        android:icon="@drawable/clothes"
+        android:title="clothes" />
+
+    <item
+        android:id="@+id/m_cart"
+        android:enabled="true"
+        android:icon="@drawable/hat"
+        android:title="shoe" />
+    <item
+        android:id="@+id/m_shoe"
+        android:enabled="true"
+        android:icon="@drawable/shoe"
+        android:title="hat" />
+
+
+
+
+
+</menu>

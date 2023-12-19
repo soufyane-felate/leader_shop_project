@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".info_product.search_page"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@android:drawable/alert_light_frame"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-14dp">
+
+        <EditText
+            android:id="@+id/search_store"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/search_background"
+            android:drawableLeft="@drawable/baseline_screen_search_desktop_24"
+            android:ems="10"
+            android:hint="   search"
+            android:inputType="text" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView">
+
+            <TextView
+                android:id="@+id/se_male"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="86dp"
+                android:background="@drawable/gender_bg_1"
+                android:gravity="center"
+                android:text="male"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/se_female"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/se_female"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="84dp"
+                android:background="@drawable/gender_bg_1"
+                android:gravity="center"
+
+                android:text="female"
+                android:textColor="@color/black"
+
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/se_male"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="-10dp"
+        android:background="@android:drawable/alert_light_frame"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-5dp"
+            android:background="@drawable/custom_bnv"
+            android:elevation="10dp"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.677"
+            app:menu="@menu/bnv_items" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
