@@ -4,9 +4,9 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.leadershop.Product
 
 class DB_product(context: Context) : SQLiteOpenHelper(context, "DB_product", null, 2) {
+
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE pro_table(id INTEGER PRIMARY KEY, name TEXT, price REAL, img TEXT, description TEXT)")
     }
@@ -41,48 +41,31 @@ class DB_product(context: Context) : SQLiteOpenHelper(context, "DB_product", nul
                 val img = cu.getString(4)
 
                 val sm = Product_ad(id, name, price, desc, img)
-                val prsm1 = Product_ad(
-                    1,
-                    "car1",
-                    1850.0,
-                    "Free express shipping\n" +
-                            "Duties and taxes are guaranteed\n" +
-                            "Estimated delivery in 3-8 business days\n" +
-                            "\n" +
-                            "Designed to be relaxed fitting. See our size & fit guide.\n" +
-                            "The model is wearing a US size XS and is 177.8cm, 61cm waist, 88.9cm hips, 78.7cm bust.\n" +
-                            "The details\n" +
-                            "This is a medium weight cotton sweater knit - 100% organically grown cotton. Dry clean only. More on fabric & care",
-                    "https://media.thereformation.com/image/upload/f_auto,q_auto,dpr_1.0/w_500,c_scale//PRD-SFCC/1312379/BLACK/1312379.2.BLACK?_s=RAABAB0"
-                )
-                val prsm2 = Product_ad(
-                    2, "baby clothes", 2099.99, "baby clothes",
-                    "https://tse4.mm.bing.net/th?id=OIP.tzDJt3YjL2VQu1_ncc3R7wHaHa&pid=Api&P=0&h=180"
-                )
-                val prsm3 = Product_ad(
-                    3,
-                    "car3",
-                    3099.99,
-                    "3dhcjhbjhkbfj",
-                    "https://tse4.mm.bing.net/th?id=OIP.tzDJt3YjL2VQu1_ncc3R7wHaHa&pid=Api&P=0&h=180"
-                )
-                val prsm4 = Product_ad(
-                    4,
-                    "car4",
-                    4099.99,
-                    "4dhcjhbjhkbfj",
-                    "https://tse4.mm.bing.net/th?id=OIP.tzDJt3YjL2VQu1_ncc3R7wHaHa&pid=Api&P=0&h=180"
-                )
-                list_p.add(prsm1)
-                list_p.add(prsm2)
-                list_p.add(prsm3)
-                list_p.add(prsm4)
-
-
                 list_p.add(sm)
             } while (cu.moveToNext())
         }
         cu?.close()
         return list_p
+    }
+
+    fun searchProductsByName(name: String): MutableList<Product_ad> {
+        val db = this.readableDatabase
+        val cu = db.rawQuery("SELECT * FROM pro_table WHERE name LIKE '%$name%'", null)
+        val searchResults = mutableListOf<Product_ad>()
+
+        if (cu != null && cu.moveToFirst()) {
+            do {
+                val id = cu.getInt(0)
+                val productName = cu.getString(1)
+                val price = cu.getDouble(2)
+                val description = cu.getString(3)
+                val img = cu.getString(4)
+
+                val product = Product_ad(id, productName, price, description, img)
+                searchResults.add(product)
+            } while (cu.moveToNext())
+        }
+        cu?.close()
+        return searchResults
     }
 }
