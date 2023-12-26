@@ -20,8 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="Your Cart"
-            app:titleCentered="true"
-            />
+            app:titleCentered="true" />
 
 
     </androidx.appcompat.widget.Toolbar>
@@ -31,46 +30,41 @@
         android:id="@+id/rvCartItems"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/llCartPayment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cartToolbar"
-        app:layout_constraintBottom_toTopOf="@id/llCartPayment"
         tools:listitem="@layout/cart_product_item" />
-
 
 
     <LinearLayout
         android:id="@+id/llCartPayment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvCartItems"
         android:background="@color/grayishWhite"
+        android:orientation="vertical"
         android:padding="20dp"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvCartItems">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tvLastSubTotalItems"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SubTotal Items(0)"
                 android:textColor="@color/greyishtext" />
 
             <TextView
                 android:id="@+id/tvLastSubTotalprice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹0"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -80,21 +74,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delivery Price"
                 android:layout_weight="1"
-                android:textColor="@color/greyishtext"
-                />
+                android:textColor="@color/greyishtext" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹0"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -104,26 +94,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#3E3A3A"
-            android:padding="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            />
+            android:background="#3E3A3A"
+            android:padding="10dp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/totalPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Price"
-                android:textColor="@color/greyishtext"
                 android:layout_weight="1"
-                />
+                android:text="Total Price"
+                android:textColor="@color/greyishtext" />
 
             <TextView
                 android:id="@+id/tvLastTotalPrice"
@@ -138,7 +125,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp"/>
+            android:layout_height="15dp" />
 
 
         <androidx.appcompat.widget.AppCompatButton

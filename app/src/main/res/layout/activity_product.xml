@@ -45,7 +45,6 @@
                     tools:ignore="MissingClass" />
 
 
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -77,18 +76,17 @@
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/delivery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Delivery"
                     android:layout_gravity="left"
                     android:layout_marginStart="20dp"
+                    android:text="Delivery"
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />
-
-
 
 
             </LinearLayout>

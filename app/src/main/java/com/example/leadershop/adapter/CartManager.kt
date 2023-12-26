@@ -1,4 +1,5 @@
 package com.example.leadershop.adapter
+
 object CartManager {
     val cartItems = mutableListOf<CartItem>()
     private val cartListeners = mutableListOf<CartListener>()

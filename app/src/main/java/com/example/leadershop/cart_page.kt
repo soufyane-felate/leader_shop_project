@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leadershop.adapter.CartAdapter
-import com.example.leadershop.adapter.CartItem
 import com.example.leadershop.adapter.CartListener
 import com.example.leadershop.adapter.CartManager
 
