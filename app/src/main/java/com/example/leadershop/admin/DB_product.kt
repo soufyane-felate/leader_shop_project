@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 class DB_product(context: Context) : SQLiteOpenHelper(context, "DB_product", null, 2) {
 
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE pro_table(id INTEGER PRIMARY KEY, name TEXT, price REAL, img TEXT, description TEXT)")
+        db.execSQL("CREATE TABLE pro_table(id INTEGER PRIMARY KEY, name TEXT, price REAL, img TEXT, description TEXT, free_d INTEGER)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -24,6 +24,7 @@ class DB_product(context: Context) : SQLiteOpenHelper(context, "DB_product", nul
         value.put("price", s.price)
         value.put("description", s.description)
         value.put("img", s.img)
+        value.put("free_d", if (s.free_d) 1 else 0)
         return db.insert("pro_table", null, value)
     }
 
@@ -39,9 +40,10 @@ class DB_product(context: Context) : SQLiteOpenHelper(context, "DB_product", nul
                 val price = cu.getDouble(2)
                 val desc = cu.getString(3)
                 val img = cu.getString(4)
+                val free_d = cu.getInt(5) == 1
 
-                val sm = Product_ad(id, name, price, desc, img)
-                list_p.add(sm)
+                val product = Product_ad(id, name, price, desc, img, free_d)
+                list_p.add(product)
             } while (cu.moveToNext())
         }
         cu?.close()
@@ -60,8 +62,9 @@ class DB_product(context: Context) : SQLiteOpenHelper(context, "DB_product", nul
                 val price = cu.getDouble(2)
                 val description = cu.getString(3)
                 val img = cu.getString(4)
+                val free_d = cu.getInt(5) == 1
 
-                val product = Product_ad(id, productName, price, description, img)
+                val product = Product_ad(id, productName, price, description, img, free_d)
                 searchResults.add(product)
             } while (cu.moveToNext())
         }

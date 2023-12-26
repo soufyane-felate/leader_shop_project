@@ -6,5 +6,6 @@ data class Product_ad(
     val price: Double,
     val description: String,
     val img: String,
+    val free_d:Boolean
 )
 

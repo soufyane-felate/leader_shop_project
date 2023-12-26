@@ -64,7 +64,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/slider_container">
@@ -77,17 +77,29 @@
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
 
 
 
             </LinearLayout>
 
+
             <TextView
                 android:id="@+id/product_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="381dp"
+                android:layout_height="106dp"
                 android:layout_margin="10dp"
+                android:layout_marginTop="48dp"
                 android:gravity="start"
                 android:text="hjsq  qkxjb bbbbbbbbbbbbbjqx qxqjbxkjqhxkqjx  xxkxbkqxjq x
                     x xkj ax a x akxazb xx axkzax x ak x huguyfuyfuyfyufvujhfvhgc
@@ -98,8 +110,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/color_container" />
-
-
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/sizes_rv"

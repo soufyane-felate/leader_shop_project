@@ -74,8 +74,8 @@
         app:layout_constraintStart_toEndOf="@id/guideline6"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCartItemAdd"
+        <Button
+            android:id="@+id/btnCartItemplus"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:background="@drawable/custombuttonselectsize"
@@ -85,15 +85,15 @@
             tools:ignore="TouchTargetSizeCheck" />
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvCartItemCount"
+        <TextView
+            android:id="@+id/tvCartItemNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="2dp"
             android:text="01" />
 
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnCartItemMinus"
             android:layout_width="20dp"
             android:layout_height="20dp"

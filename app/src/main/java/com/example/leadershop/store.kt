@@ -17,7 +17,6 @@ import com.example.leadershop.admin.Product_ad
 import com.example.leadershop.info_product.RecyclerItemClickListener
 import com.example.leadershop.info_product.product
 import com.example.leadershop.info_product.search_page
-import com.example.leadershop.menu.cart
 import com.example.leadershop.menu.favorite
 import com.example.leadershop.menu.profile
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -82,6 +81,7 @@ class store : AppCompatActivity() {
                             putExtra("productDescription", selectedItem.description)
                             putExtra("productPrice", selectedItem.price)
                             putExtra("productImage", selectedItem.img)
+                            putExtra("productdelivery", selectedItem.free_d)
                         }
                         startActivity(intent)
                     }
@@ -110,7 +110,7 @@ class store : AppCompatActivity() {
                     }
 
                     override fun onLongItemClick(view: View?, position: Int) {
-                        // Handle long clicks if needed
+
                     }
                 })
         )

@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="280dp"
+    android:layout_height="295dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="15dp"
@@ -11,8 +11,8 @@
     android:id="@+id/cardView">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="407dp"
+        android:layout_height="299dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -20,45 +20,66 @@
             android:id="@+id/ivProductImg"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            />
+            android:scaleType="centerCrop" />
+
         <TextView
             android:id="@+id/ivProductname"
-            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
             android:text="test"
+            android:layout_gravity="left"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
         <TextView
             android:id="@+id/ivProductprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="20dp"
+            android:text="test"
             android:textColor="#EF0606"
             android:textSize="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_margin="5dp"
-            android:text="test"
             android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ivProductdelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="8dp"
+                android:text="free delivery"
+                android:layout_gravity="left"
+                android:layout_marginStart="20dp"
+                android:textColor="#0BAF11"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+
+
+
 
         <TextView
             android:id="@+id/ivProductdesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:visibility="invisible"
             android:text="test"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
         <TextView
             android:id="@+id/ivProductid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:visibility="invisible"
             android:text="test"
-            android:textStyle="bold" />
-
-
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
 
     </LinearLayout>

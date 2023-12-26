@@ -11,4 +11,6 @@
     <color name="grayishWhite">#F1EDED</color>
     <color name="greyishtext">#474444</color>
     <color name="statusbar">#ffffff</color>
+    <color name="green">#09B110</color>
+    <color name="red">#DC1406</color>
 </resources>

@@ -13,6 +13,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
 
@@ -32,6 +33,25 @@ class CustomAdapter(private val context: Context, private val productList: List<
         holder.nameTextView.text = " ${currentItem.name}"
         holder.descTextView.text = " ${currentItem.description}"
         holder.priceTextView.text = " ${currentItem.price} MAD"
+        if (currentItem.free_d) {
+            holder.deliveryTextView.text = "Free Delivery"
+            holder.deliveryTextView.setTextColor(ContextCompat.getColor(context, R.color.green))
+            holder.deliveryTextView.setCompoundDrawablesWithIntrinsicBounds(
+                R.drawable.ic_free_delivery,
+                0,
+                0,
+                0
+            )
+        } else {
+            holder.deliveryTextView.text = "Delivery Not Free"
+            holder.deliveryTextView.setTextColor(ContextCompat.getColor(context, R.color.red))
+            holder.deliveryTextView.setCompoundDrawablesWithIntrinsicBounds(
+                R.drawable.ic_delivery_charges,
+                0,
+                0,
+                0
+            )
+        }
 
         if (isConnectedToInternet()) {
             Picasso.get()
@@ -54,6 +74,8 @@ class CustomAdapter(private val context: Context, private val productList: List<
         val descTextView: TextView = itemView.findViewById(R.id.ivProductdesc)
         val priceTextView: TextView = itemView.findViewById(R.id.ivProductprice)
         val imgImageView: ImageView = itemView.findViewById(R.id.ivProductImg)
+        val deliveryTextView: TextView = itemView.findViewById(R.id.ivProductdelivery)
+
     }
 
     private fun isConnectedToInternet(): Boolean {

@@ -77,32 +77,16 @@
         android:hint="image"
         android:textSize="24dp"
         android:textStyle="bold" />
-    <RadioGroup
-        android:id="@+id/gender"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
 
-        >
-        <RadioButton
-            android:id="@+id/male"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="24dp"
-            android:text=" male "/>
-        <RadioButton
-            android:id="@+id/female"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="24dp"
+      <Switch
+          android:id="@+id/free_delivery_product"
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:textStyle="bold"
+          android:textSize="24dp"
+          android:text="free_delivery"
+          />
 
-            android:text=" female "/>
-    </RadioGroup>
 
         <Button
             android:id="@+id/btn_add_product"

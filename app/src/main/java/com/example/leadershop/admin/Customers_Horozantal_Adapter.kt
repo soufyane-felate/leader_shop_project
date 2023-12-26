@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.leadershop.R
 import com.example.leadershop.admin.Customers_Horozantal_Adapter.*
@@ -17,14 +18,12 @@ import com.squareup.picasso.Picasso
 class Customers_Horozantal_Adapter(
     private val context: Context,
     private val productList: List<Product_ad>,
-) :
-    RecyclerView.Adapter<ViewHolder>() {
+) : RecyclerView.Adapter<Customers_Horozantal_Adapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item_view2, parent, false)
         return ViewHolder(view)
     }
-
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = productList[position]
@@ -33,6 +32,26 @@ class Customers_Horozantal_Adapter(
         holder.nameTextView.text = " ${currentItem.name}"
         holder.descTextView.text = " ${currentItem.description}"
         holder.priceTextView.text = " ${currentItem.price} MAD"
+
+        if (currentItem.free_d) {
+            holder.deliveryTextView.text = "Free Delivery"
+            holder.deliveryTextView.setTextColor(ContextCompat.getColor(context, R.color.green))
+            holder.deliveryTextView.setCompoundDrawablesWithIntrinsicBounds(
+                R.drawable.ic_free_delivery,
+                0,
+                0,
+                0
+            )
+        } else {
+            holder.deliveryTextView.text = "Delivery Not Free"
+            holder.deliveryTextView.setTextColor(ContextCompat.getColor(context, R.color.red))
+            holder.deliveryTextView.setCompoundDrawablesWithIntrinsicBounds(
+                R.drawable.ic_delivery_charges,
+                0,
+                0,
+                0
+            )
+        }
 
         if (isConnectedToInternet()) {
             Picasso.get()
@@ -55,6 +74,7 @@ class Customers_Horozantal_Adapter(
         val descTextView: TextView = itemView.findViewById(R.id.ivProductdesc1)
         val priceTextView: TextView = itemView.findViewById(R.id.ivProductprice1)
         val imgImageView: ImageView = itemView.findViewById(R.id.ivProductImg1)
+        val deliveryTextView: TextView = itemView.findViewById(R.id.ivProductdelivery1)
     }
 
     private fun isConnectedToInternet(): Boolean {
