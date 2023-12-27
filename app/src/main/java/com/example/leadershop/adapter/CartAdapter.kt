@@ -1,5 +1,6 @@
 package com.example.leadershop.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +23,7 @@ class CartAdapter(private val cartItems: MutableList<CartItem>) :
         private val minusButton: Button = itemView.findViewById(R.id.btnCartItemMinus)
         private val itemNumberTextView: TextView = itemView.findViewById(R.id.tvCartItemNumber)
 
+
         fun bind(cartItem: CartItem) {
             productNameTextView.text = cartItem.name
             productPriceTextView.text = "${cartItem.price} MAD"
@@ -43,16 +45,26 @@ class CartAdapter(private val cartItems: MutableList<CartItem>) :
             }
         }
     }
+    private var onItemLongClickListener: ((CartItem) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.cart_product_item, parent, false)
         return CartViewHolder(view)
     }
+    fun setOnItemLongClickListener(listener: (CartItem) -> Unit) {
+        onItemLongClickListener = listener
+    }
 
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val currentItem = cartItems[position]
         holder.bind(currentItem)
+
+        holder.itemView.setOnLongClickListener {
+            Log.d("CartAdapter", "Long click detected for position: $position")
+            onItemLongClickListener?.invoke(currentItem)
+            true
+        }
     }
 
     override fun getItemCount(): Int {

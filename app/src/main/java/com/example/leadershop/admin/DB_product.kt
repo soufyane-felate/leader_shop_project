@@ -43,7 +43,24 @@ class DB_product(context: Context) : SQLiteOpenHelper(context, "DB_product", nul
                 val free_d = cu.getInt(5) == 1
 
                 val product = Product_ad(id, name, price, desc, img, free_d)
+                val pr2 = Product_ad(
+                    101,
+                    " Pro 6 Wireless",
+                    100.00,
+                    " Pro 6 TWS Wireless Bluetooth Earphones Headphones Mini Fone Earphone Stereo Sport Headset For Xiaomi Android Earbuds",
+                    "https://ae01.alicdn.com/kf/Sd98fafd8788e4c50a0293eebfaa5fbffI/PRO-6-Wireless-Bluetooth-Headset-5-0-Bluetooth-Protocol-Earplug-Type-Strong-Endurance-Gaming-Competitive-Headphones.png_350x350xz.png_.webp",
+                    true
+                )
+                val pr3 = Product_ad(
+                    110,
+                    "Original Pro 6",
+                    100.00,
+                    "Original Pro 6 TWS Wireless Bluetooth Earphones Headphones Mini Fone Earphone Stereo Sport Headset For Xiaomi Android Earbuds",
+                    "https://ae01.alicdn.com/kf/Se9889fea78d44b7eadccd336e9aba4a1w/Original-Pro-6-TWS-Wireless-Bluetooth-Earphones-Headphones-Mini-Fone-Earphone-Stereo-Sport-Headset-For-Xiaomi.jpg_350x350xz.jpg_.webp",
+                    true
+                )
                 list_p.add(product)
+                list_p.add(pr2)
             } while (cu.moveToNext())
         }
         cu?.close()

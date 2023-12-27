@@ -1,9 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Update_Product.update">
+    tools:context=".Update_Product.update"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="product update"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/update_id_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="id"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/update_name_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="name"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/update_price_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="price"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/update_img_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="description"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/update_desc_product"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_style"
+        android:gravity="center_horizontal"
+        android:hint="image"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/update_free_delivery_product"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:text="free_delivery"
+        />
+
+
+    <Button
+        android:id="@+id/update_btn_add_product"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn"
+        android:gravity="center_horizontal"
+        android:hint="add"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>

@@ -45,7 +45,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="50dp"
                 android:background="@drawable/buy_bg"
-                android:text="buy now" />
+                android:text="Add product" />
 
 
         </LinearLayout>
@@ -70,18 +70,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="her you can add product"
+                android:text="her you can update product"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <Button
                 android:layout_marginTop="20dp"
-                android:id="@+id/btn_buy1"
+                android:id="@+id/btn_update"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="50dp"
                 android:background="@drawable/buy_bg"
-                android:text="buy now" />
+                android:text="update product" />
 
 
         </LinearLayout>
